@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #d8c3a5;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  max-width: 1250px;
+  width: 95%;
+  margin: auto;
+}
+/*========= NAVBAR ========== */
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: static;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  align-items: center;
+  z-index: 999;
+  order: 1;
+}
+.toggle-btn {
+  display: none;
+  background-color: transparent;
+  border: 0;
+}
+.toggle-btn:hover {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.menu-items {
+  display: flex;
+  gap: 2rem;
+}
+.logo {
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #117964;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+  .navbar-container {
+    display: flex;
+    height: 64px;
+  }
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+  }
+  .toggle-btn {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .menu-items.show {
+    display: flex;
+    padding-top: 30px;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 2.5rem;
+  }
+}
+
+/*========= HOME PAGE ========== */
+.hero {
+  margin-top: 100px;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+.hero h1 {
+  margin-top: 130px;
+  font-size: 2.8rem;
+}
+.hero-text {
+  width: 50%;
+  font-size: 1.3rem;
+  text-align: justify;
+  word-spacing: 3px;
+}
+.social-icons a {
+  margin-right: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 40px;
+  font-size: 2.5rem;
+}
+.social-icons a:nth-child(1) {
+  color: #006097;
+}
+.social-icons a:nth-child(1):hover {
+  color: #063958;
+}
+.social-icons a:nth-child(2) {
+  color: #424242;
+}
+.social-icons a:nth-child(2):hover {
+  color: #000a10;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .hero img {
+    height: 500px;
+    z-index: -2;
+  }
+  .hero-text {
+    font-size: 1.4rem;
+    width: 90%;
+    word-spacing: 3px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+/*========= PROJECTS ========== */
+#projects {
+  width: 100%;
+  margin: auto;
+}
+#projects h2 {
+  font-weight: 600;
+  margin-top: 50px;
+}
+.cards-main {
+  background-color: #ffffffc2;
+}
+
+.btn {
+  background-color: #cfc1ad;
+  width: 40%;
+  font-size: 1.2rem;
+}
+.btn:hover {
+  background-color: rgb(20, 14, 6);
+  color: rgb(246, 255, 255);
+}
+.tech-icons {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.tech-icons i,
+img {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .cards-main {
+    margin: 40px;
+  }
+
+  .col-auto {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .tech-icons i,
+  img {
+    margin-right: 20px;
+  }
+}
+
+/*========= ABOUT ========== */
+#about {
+  margin-top: 150px;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+#about h3 {
+  font-size: 2rem;
+  color: rgb(61, 31, 8);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+#about img {
+  width: 100%;
+  margin-top: 40px;
+}
+.about-text {
+  width: 95%;
+  text-align: justify;
+}
+#list {
+  margin-left: 100px;
+}
+ul {
+  list-style-type: "\2726";
+}
+
+#blog {
+  color: brown;
+}
+#blog:hover {
+  color: rgb(38, 0, 255);
+}
+/*========= FOOTER ========== */
+footer {
+  text-align: center;
+  margin-bottom: 0;
+}
+hr {
+  border: 1px solid #000000; /* Set the color of the line */
+  margin: 10px auto; /* Center the line with some spacing */
+}
